@@ -56,7 +56,7 @@ No testing has been carried out on Windows, PR's wellcome.
 
 The release is still in beta, expect certain things to fail. Please report issues.
 
-### 0.0.1a
+### v0.1.0
 
 The initial release of the application.
 

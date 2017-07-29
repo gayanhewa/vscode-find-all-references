@@ -1,12 +1,12 @@
 {
     "name": "referenceshelper",
-    "displayName": "referenceshelper",
+    "displayName": "Find all references",
     "description": "Find all references for almost all files.",
     "repository": {
         "type": "git",
         "url": "https://github.com/gayanhewa/vscode-find-all-references"
     },
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "gayanhewa",
     "author": "Gayan Hewa <gayanhewa@gmail.com>",
     "license": "MIT",
@@ -23,14 +23,13 @@
         "jade", "python", "r", "razor", "scss", "shaderlab", "shellscript", "sql", "swift", "tex", "xsl", "yaml",
         "intellisense"
     ],
+    "icon": "assets/icon.png",
     "categories": [
         "Languages",
         "Other"
     ],
     "activationEvents": [
-        "onLanguage:php",
-        "workspaceContains:*.json",
-        "workspaceContains:*.lock"
+        "*"
     ],
     "main": "./out/src/extension",
     "contributes": {
