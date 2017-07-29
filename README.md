@@ -1,3 +1,5 @@
+[![](https://vsmarketplacebadge.apphb.com/version/gayanhewa.referenceshelper.svg)](https://marketplace.visualstudio.com/items?itemName=gayanhewa.referenceshelper) [![](https://vsmarketplacebadge.apphb.com/installs/gayanhewa.referenceshelper.svg)](https://marketplace.visualstudio.com/items?itemName=gayanhewa.referenceshelper) [![](https://vsmarketplacebadge.apphb.com/rating/gayanhewa.referenceshelper.svg)](https://marketplace.visualstudio.com/items?itemName=gayanhewa.referenceshelper)
+
 # Find All References README
 
 This module enables Visual Studio code to run `Find All References` calls with the power of `ripgrep` which is a soltion written in rust and performs well than Silver Searcher, Platinum searcher etc
