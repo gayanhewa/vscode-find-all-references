@@ -36,6 +36,18 @@ This extension contributes the following settings:
 
 * `find.all.references.engine`: rg/ag , based on the available seacher you can use either ripgrep ( rg ) or Silver Searcher ( ag )
 
+Use ripgrep
+
+`
+    find.all.references.engine: 'rg'
+`
+
+Use silver searcher
+
+`
+    find.all.references.engine: 'ag'
+`
+
 ## Known Issues
 
 No testing has been carried out on Windows, PR's wellcome.

@@ -45,10 +45,10 @@ class ReferenceProvider implements vscode.ReferenceProvider {
 
 export function activate(context: vscode.ExtensionContext) {
     let languages = [
-        'php', 'ruby', 'rust', 'python', 'erlang', 'java', 'cpp', 'c', 'markdown', 'xml', 'haml', 'twig', 'bat',
-        'bibtex', 'clojure', 'coffeescript', 'css', 'csharp', 'diff', 'dockerfile', 'fsharp', 'go', 'groovy', 'handlebars', 'html',
-        'ini', 'json', 'latex', 'less', 'lua', 'makefile', 'objective-c', '	objective-cpp', 'perl6', 'perl', 'powershell',
-        'jade', 'python', 'r', 'razor', 'scss', 'shaderlab', 'shellscript', 'sql', 'swift', 'tex', 'xsl', 'yaml'
+        "php", "ruby", "rust", "python", "erlang", "java", "cpp", "c", "markdown", "xml", "haml", "twig", "bat",
+        "bibtex", "clojure", "coffeescript", "css", "csharp", "diff", "dockerfile", "fsharp", "go", "groovy", "handlebars", "html",
+        "ini", "json", "latex", "less", "lua", "makefile", "objective-c", "objective-cpp", "perl6", "perl", "powershell",
+        "jade", "python", "r", "razor", "scss", "shaderlab", "shellscript", "sql", "swift", "tex", "xsl", "yaml"
     ];
 
     languages.forEach((language) => {
