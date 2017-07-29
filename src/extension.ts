@@ -15,7 +15,7 @@ class PHPReferenceProvider implements vscode.ReferenceProvider {
         return new Promise<vscode.Location[]>((resolve, reject) => {
 
             const searchTerm = document.getText(document.getWordRangeAtPosition(position));
-            let rg = child_process.spawn('rg', ['--column', searchTerm, '/Users/gayan.hewa/Workspace/phphelper']);
+            let rg = child_process.spawn('rg', ['--column', searchTerm, vscode.workspace.rootPath]);
 
             rg.stdout.on('data', (data) => {
                 let list = [];
