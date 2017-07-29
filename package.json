@@ -11,14 +11,23 @@
         "Other"
     ],
     "activationEvents": [
-        "onLanguage:php"
+        "onLanguage:php",
+        "workspaceContains:*.json",
+        "workspaceContains:*.lock"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [{
             "command": "extension.sayHello",
             "title": "Hello World"
-        }]
+        }],
+        "configuration": {
+            "properties": {
+                "find.all.references.engine": {
+                    "default":"rg"
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",

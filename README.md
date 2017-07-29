@@ -1,20 +1,30 @@
-# phphelper README
+# Find All References README
 
-This is the README for your extension "phphelper". After writing up a brief description, we recommend including the following sections.
+This module enables Visual Studio code to run `Find All References` calls with the power of `ripgrep` which is a soltion written in rust and performs well than Silver Searcher, Platinum searcher etc
 
 ## Features
+- Find All References
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![Alt text](/assets/find-references.gif?raw=true "Find References Demo 1")
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Powered by Ripgrep
+This module  on [ripgrep](https://github.com/BurntSushi/ripgrep) package. Instructions to install ripgrep can be found [here](https://github.com/BurntSushi/ripgrep#installation)
+
+You can install ripgrep using homebrew, Windows Chocolatey or Cargo if you are a rust developer. You also find the binaries to install on Linux, Windows and Mac on the [github repo](https://github.com/BurntSushi/ripgrep#installation).
+
+`$ brew install ripgrep`
+
+`$ choco install ripgrep`
+
+`$ cargo install ripgrep`
+
+### Powered by Silver Searcher
+
+You can also use Silver searcher as an alternative to ripgrep. Simply install it and update the config
+
+`$ brew install ag`
 
 ## Extension Settings
 
@@ -24,42 +34,22 @@ For example:
 
 This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+* `find.all.references.engine`: rg/ag , based on the available seacher you can use either ripgrep ( rg ) or Silver Searcher ( ag )
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+No testing has been carried out on Windows, PR's wellcome.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+The release is still in beta, expect certain things to fail. Please report issues.
 
-### 1.0.0
+### 0.0.1a
 
-Initial release of ...
+The initial release of the application.
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+- Supports find references using ripgrep
+- Supports find all references using silver searcher
+- The reference search support bind to all languages in the list of [identifiers](https://code.visualstudio.com/docs/languages/identifiers) except for typescript since vscode ships with that built in.
 
 **Enjoy!**
