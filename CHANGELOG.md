@@ -12,3 +12,9 @@ The initial release of the application. The release is still in beta, expect cer
 ## [v0.1.2]
 
 - Remove registered command that is unused.
+
+## [v0.1.3]
+
+- Fixing the bug with the config option not getting picked up
+- Refactoring the main classes
+- Introducing additional options for the searcher `tool --arguments` with a default `--column` argument
