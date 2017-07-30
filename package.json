@@ -81,6 +81,9 @@
             "properties": {
                 "find.all.references.engine": {
                     "default": "rg"
+                },
+                "find.all.references.options": {
+                    "default": ""
                 }
             }
         }
