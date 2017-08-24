@@ -27,8 +27,6 @@ export class ReferenceProvider implements vscode.ReferenceProvider {
             // --column is hardcoded because its mandatory for now
             const options = '--column '+engine_options;
 
-            console.log("Find All References Is Configured to use :", engine);
-            console.log("Find All References Is Configured with options:", options);
             // Note to self: if we pass in the additional space after the shell execution, command doesn't get executed correctly when the argument has an extra space.
             // `rg --column` and not `rg --column `
             return resolve(new EngineOptions(engine === undefined? 'rg': engine, options.trim()));
@@ -39,8 +37,12 @@ export class ReferenceProvider implements vscode.ReferenceProvider {
     {
         return new Promise<vscode.Location[]>((resolve, reject) => {
             const searchTerm = document.getText(document.getWordRangeAtPosition(position));
+            let args = options.getOptions().split(' ');
+            args.push(searchTerm);
+            args.push(vscode.workspace.rootPath);
             // TODO : Introduce the ability to choose different search options ripgrep, silver searcher, git grep, platinum searcher etc
-            let rg = child_process.spawnSync(options.getEngine(), [options.getOptions(), searchTerm, vscode.workspace.rootPath]);
+            console.log(options.getEngine(), args);
+            let rg = child_process.spawnSync(options.getEngine(), args);
             let lines = rg.stdout.toString().split('\n');
             let list = [];
 
