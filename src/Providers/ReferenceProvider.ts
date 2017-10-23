@@ -50,6 +50,13 @@ export class ReferenceProvider implements vscode.ReferenceProvider {
                 let arr = item.split(":");
 
                 if (arr.length>2) {
+                    // In case of drive letter
+                    if (arr[0].length == 1)
+                    {
+                        let path = arr.shift() + ':' + arr.shift();
+                        arr.unshift(path);
+                    }
+                    
                     // Position starts from zero refer to vscode.d.ts
                     let line_no = parseInt(arr[1])-1;
                     let col_no = parseInt(arr[2])-1;
