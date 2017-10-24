@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "Find All References" extension will be documented in this file.
 
+## [v0.2.1]
+
+- Merged PR fixing issues with windows drive paths https://github.com/gayanhewa/vscode-find-all-references/pull/6 from https://github.com/csholmq
+
 ## [v0.2.0]
 
 - Fix the issue with the passing in additional options to the engine

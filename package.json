@@ -6,7 +6,7 @@
         "type": "git",
         "url": "https://github.com/gayanhewa/vscode-find-all-references"
     },
-    "version": "0.2.0",
+    "version": "0.2.1",
     "publisher": "gayanhewa",
     "author": "Gayan Hewa <gayanhewa@gmail.com>",
     "license": "MIT",
