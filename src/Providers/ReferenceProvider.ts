@@ -36,8 +36,14 @@ export class ReferenceProvider implements vscode.ReferenceProvider {
     private processSearch(document, position, options): Thenable<vscode.Location[]>
     {
         return new Promise<vscode.Location[]>((resolve, reject) => {
-            const searchTerm = document.getText(document.getWordRangeAtPosition(position));
+            let searchTerm = document.getText(document.getWordRangeAtPosition(position));
             let args = options.getOptions().split(' ');
+            let searchWord = searchTerm;
+            
+            if(document.languageId=="cpp"){
+                searchTerm = '^((?!").)*'+searchTerm;
+                console.log("add the regex!");
+            }
             args.push(searchTerm);
             args.push(vscode.workspace.rootPath);
             // TODO : Introduce the ability to choose different search options ripgrep, silver searcher, git grep, platinum searcher etc
@@ -60,9 +66,13 @@ export class ReferenceProvider implements vscode.ReferenceProvider {
                     // Position starts from zero refer to vscode.d.ts
                     let line_no = parseInt(arr[1])-1;
                     let col_no = parseInt(arr[2])-1;
+                    // use regex,the seach result is not the original word
+                    if(document.languageId=="cpp"){
+                        col_no =  arr[3].indexOf(searchWord);
+                    }
 
                     let start_pos = new vscode.Position(line_no, col_no);
-                    let end_pos = new vscode.Position(line_no, col_no+searchTerm.length);
+                    let end_pos = new vscode.Position(line_no, col_no+searchWord.length);
                     let loc = new vscode.Location(vscode.Uri.file(arr[0]), new vscode.Range(start_pos, end_pos));
 
                     list.push(loc);
