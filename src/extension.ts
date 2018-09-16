@@ -8,7 +8,8 @@ export function activate(context: vscode.ExtensionContext) {
         "php", "ruby", "rust", "python", "erlang", "java", "cpp", "c", "markdown", "xml", "haml", "twig", "bat",
         "bibtex", "clojure", "coffeescript", "css", "csharp", "diff", "dockerfile", "fsharp", "go", "groovy", "handlebars", "html",
         "ini", "json", "latex", "less", "lua", "makefile", "objective-c", "objective-cpp", "perl6", "perl", "powershell",
-        "jade", "python", "r", "razor", "scss", "shaderlab", "shellscript", "sql", "swift", "tex", "xsl", "yaml"
+        "jade", "python", "r", "razor", "scss", "shaderlab", "shellscript", "sql", "swift", "tex", "xsl", "yaml",
+        "fortran", "fortran-modern"
     ];
 
     languages.forEach((language) => {
